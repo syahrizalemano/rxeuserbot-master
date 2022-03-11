@@ -1,0 +1,134 @@
+{
+    "name": "RXEBOT",
+    "description": "FRIDAY BASE",
+    "logo": "https://telegra.ph/file/0a6834c01cfa2c5d83448.jpg",
+    "keywords": [
+        "telegram",
+        "RXE",
+        "plugin",
+        "remodification"
+    ],
+    "repository": "https://github.com/syahrizalemano/rxeuserbot",
+    "website": "ezzra",
+    "success_url": "t.me/ezzraezz",
+    "stack": "container",
+    "env": {
+        "ENV": {
+            "description": " Menyetel ini ke APA SAJA akan mengaktifkan heroku. ",
+            "value": "APA SAJA"
+        },
+        "TEMP_DOWNLOAD_DIRECTORY": {
+            "description": " Di mana file yang diunduh akan pergi. ",
+            "value": "./RXE/DOWNLOADS/",
+            "required": false
+        },
+        "ALIVE_NAME": {
+            "description": "Masukkan Username Disini",
+            "value": ""
+        },
+        "APP_ID": {
+            "description": "Dapatkan nilai ini dari my.telegram.org! Tolong jangan mencuri",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Dapatkan nilai ini dari my.telegram.org! Tolong jangan mencuri",
+            "value": ""
+        },
+        "PLUGIN_CHANNEL": {
+            "description": "Channel Tempat Anda Menyimpan Plugin",
+            "value": ""
+        },
+        "SUDO_USERS": {
+            "description": "Masukkan User Id Yang Ingin Anda Gunakan Untuk Mengontrol Sudo. Jangan Berikan ID Anda Sendiri Atau ID Pengguna yang Tidak Anda Percayai.",
+            "nilai": "",
+            "value": false
+        },
+        "PRIVATE_GROUP_ID": {
+            "description": "A Group ID Dimana Anda Ingin Fitur Logging",
+            "value": ""
+        },
+        "STRING_SESSION": {
+            "description": "Dapatkan Dari Repl.run Atau Jalankan Secara Lokal",
+            "value": ""
+        },
+        "TESSDATA_PREFIX": {
+            "description": " Pytesserct Path. Jangan Edit Sampai Anda Tahu Apa yang Anda Lakukan.. ",
+            "value": "./.apt/usr/share/tesseract-ocr/4.00/tessdata"
+        },
+        "GITHUB_ACCESS_TOKEN": {
+            "description": "Token Akses Github Anda untuk Plugin Komit GitHub. Google 'Token akses Github' untuk menemukan lebih banyak Tentang Ini.",
+            "value": "",
+            "required": false
+        },
+        "GIT_REPO_NAME": {
+            "description": "Nama repo Anda Contoh: Midhunkm1294/FridayUserbot, tetapi GITHUB_ACCESS_TOKEN harus di-setup terlebih dahulu.",
+            "value": "",
+            "required": false
+        },
+        "LYDIA_API_KEY": {
+            "description": "Diperlukan untuk Lydia AI. Ikuti https://telegra.ph/Lydia-09-05 untuk mendapatkan API Anda.",
+            "value": "",
+            "required": false
+        },
+        "HEROKU_API_KEY": {
+            "description": "Buka https://dashboard.heroku.com/account, scroll ke bawah dan tekan Reveal API.Diperlukan agar updater berfungsi.",
+            "value": ""
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Nilai Nama Aplikasi yang Anda isi tepat di atas.Diperlukan agar updater berfungsi.",
+            "value": ""
+        },
+        "TG_BOT_TOKEN_BF_HER": {
+            "description": "Dibutuhkan untuk pembuat tombol inline. Buat bot di @BotFather dan dapatkan token bot Anda. Dapatkan.",
+            "value": ""
+        },
+        "TG_BOT_USER_NAME_BF_HER": {
+            "description": "Anda Telegram Bot API Key Di Sini. Dibutuhkan Untuk Modul Bantuan Dan Tombol C.",
+            "value": " "
+        },
+        "DOWNLOAD_PFP_URL_CLOCK": {
+            "description": "Diperlukan untuk modul autopic. Sebuah url yang merupakan link preview dari Profile Pic Anda",
+            "value": "",
+            "required": false
+        },
+        "ALIVE_IMAGE": {
+            "description": "Masukkan URL Gambar untuk bot pic",
+            "value": "",
+            "required": false
+        },
+        "PMPERMIT_PIC": {
+            "description": "Masukkan URL Gambar untuk gambar pmsecurity bot. PERGI KE https://id.imgbb.com/ Untuk membuat url",
+            "value": "",
+            "required": true
+        },
+
+
+        "TZ": {
+            "description": "Diperlukan untuk Waktu yang Tepat pada autopic",
+            "value": "Asia/Colombo",
+            "required": false
+        }
+   },
+  "addons": [
+    {
+    "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
