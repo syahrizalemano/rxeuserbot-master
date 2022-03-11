@@ -5,7 +5,6 @@ asyncurban
 beautifulsoup4
 bitlyshortener
 colour
-
 Pillow
 quote
 antispaminc
